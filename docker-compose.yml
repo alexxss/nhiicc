@@ -1,0 +1,11 @@
+services:
+  nhiicc:
+    image: nhiicc:1.0.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    network_mode: host
+    devices:
+      - /dev/bus/usb:/dev/bus/usb
+    environment:
+      - TERM=xterm-256color
